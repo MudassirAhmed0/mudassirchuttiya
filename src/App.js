@@ -5,6 +5,7 @@ import Contact from './Pages/Contact';
 import Services from './Pages/Services';
 import Layout from './Components/Layout/Layout';
 import ScrollToTop from './Components/ScrollToTop';
+import About from './Pages/About';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route element={<Home />} exact path='/' />
         <Route element={<Contact />} path='/contact-us' />
+        <Route element={<About />} path='/about-us' />
         <Route element={<Services />} path='/services/:serviceName' />
       </Routes>
     </Layout>

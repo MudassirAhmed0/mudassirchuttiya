@@ -339,6 +339,10 @@ ul {
           justify-content: space-between;
 }
 
+.mega-card-inner:hover .mega-card-text {
+  color: #1b75bb;
+}
+
 .mega-card-img-div {
   height: 110px;
   -webkit-box-pack: center;
@@ -354,13 +358,12 @@ ul {
 .mega-card-text {
   text-align: center;
   padding-top: 12px;
-  text-decoration: none;
   color: #1d1855;
   font-size: 18px;
 }
 
-.mega-card-text:hover {
-  color: #1b75bb;
+a {
+  text-decoration: none;
 }
 
 .mega-hover:hover .mega-menu {
@@ -812,6 +815,10 @@ input {
   height: 1000px;
 }
 
+.h-500px {
+  height: 450px;
+}
+
 .p-color {
   color: #1d1855;
 }
@@ -1243,5 +1250,11 @@ nav {
 
 .accordion-content {
   padding: 1em 1.5em;
+}
+
+@media (max-width: 600px) {
+  .h-500px {
+    height: 700px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

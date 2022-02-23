@@ -252,6 +252,9 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    &:hover .mega-card-text{
+        color: #1b75bb;
+    }
 }
 
 .mega-card-img-div{
@@ -267,13 +270,13 @@ ul {
 .mega-card-text{
     text-align: center;
     padding-top: 12px;
-    text-decoration: none;
     color: #1d1855;
     font-size: 18px; 
+  
+}
+a{
 
-    &:hover{
-        color: #1b75bb;
-    }
+    text-decoration: none;
 }
 .mega-hover:hover .mega-menu {
     display: flex;
@@ -635,6 +638,10 @@ input {
 .h-1000px {
     height: 1000px;
 }
+.h-500px {
+    height: 450px;
+}
+
 .p-color {
     color: #1d1855;
 }
@@ -1043,3 +1050,8 @@ nav {
     padding: 1em 1.5em;
   }
   
+  @media(max-width:600px){
+    .h-500px {
+        height: 700px;
+    }
+  }
