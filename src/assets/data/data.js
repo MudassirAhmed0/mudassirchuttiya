@@ -185,7 +185,7 @@ export const whatWeDo =
                 "heading": "Email Marketing",
                 "para": "Email marketing is currently priority for businesses because it's an essential marketing tool, Best Email Marketing services will definitely be a significant...",
                 "imgBlue": "https://bunyan.netlify.app/images/detail-icon-both/emailmarketing-blue.svg", 
-                "imgWhite": "https://bunyan.netlify.app/images/detail-icon-both/emailmarketing.white.svg", 
+                "imgWhite": "https://bunyan.netlify.app/images/detail-icon-both/emailmarketing-white.svg", 
             }
         },
         {

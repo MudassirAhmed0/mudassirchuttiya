@@ -15,7 +15,7 @@ const HeroSection = () => {
                 </h1>
                 <p className='w-50 white-color f-14 pt-2r min-tab-w-100 min-tab-mb-3r'>A Marketing Agency based in West Africa that belive in relationships, transparency and trust. We are a resluts driven marketing agency that delivers powerful results have a projects in mind? Speak with us today about a consultation.</p>
 
-                <div className='hero-contact min-tab-m-auto mob-m-0'>
+                <div className='hero-contact  mob-m-0'>
                     <Link to={"/contact-us"} className='white-color text-decoration '>Contact US</Link>
                 </div>
             </div>

@@ -1,18 +1,20 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { CgArrowLongRight } from 'react-icons/cg'
 import { Link } from 'react-router-dom'
 
 const Card = ({ item }) => {
-
+    const [image,setImage] = useState(true)
     const imgRef = useRef()
-    const handleMouseEnter = (src) => imgRef.current.src = src
-    const handleMouseLeave = (src) => imgRef.current.src = src
+    const handleMouseEnter = (src) => setImage(!image)
+    const handleMouseLeave = (src) => setImage(!image)
     return (
-        <div className='service-card cursour-pointer' onMouseEnter={() => handleMouseEnter(item.info.imgWhite)} onMouseLeave={() => handleMouseLeave(item.info.imgBlue)}>
+        <div className='service-card cursour-pointer' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className='flex justify-center align-center h-150px'>
                 {/* <img src={OnlineIcon} alt="" className='icon-width' /> */}
 
-                <img ref={imgRef} src={item?.info?.imgBlue} alt={item?.info?.heading} className='icon-width' />
+                {/* <img ref={imgRef} src={item?.info?.imgBlue} alt={item?.info?.heading} className='icon-width' /> */}
+     {   image ?        <img  src={item?.info?.imgBlue} alt={item?.info?.heading} className='icon-width' />:
+                <img  src={item?.info?.imgWhite} alt={item?.info?.heading} className='icon-width' />}
                 {/* {!isHovered ?
                                 :
 

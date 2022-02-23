@@ -2,6 +2,15 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { FaChevronDown, FaBars } from "react-icons/fa";
 import Logo from '../../assets/images/logo.png'
+import onlineAdvertising from '../../assets/images/detail-icon-both/onlineadvertising-blue.svg'
+import socialmediamarketingandmanagement from '../../assets/images/detail-icon-both/socialmediamarketingandmanagement-blue.svg'
+import emailmarketing from '../../assets/images/detail-icon-both/emailmarketing-blue.svg'
+import videoproduction from '../../assets/images/detail-icon-both/videoproduction-blue.svg'
+import smsmarketing from '../../assets/images/detail-icon-both/smsmarketing-blue.svg'
+import graphicdesign from '../../assets/images/detail-icon-both/graphicdesign-blue.svg'
+import marketingstrategy from '../../assets/images/detail-icon-both/marketingstrategy-blue.svg'
+import websitedevelopment from '../../assets/images/detail-icon-both/websitedevelopment-blue.svg'
+import brandMarketing from '../../assets/images/detail-icon-both/brandmarketing-blue.svg'
 
 
 
@@ -10,7 +19,7 @@ const Navbar = () => {
   const pathname = window.location.pathname
 
   const [toggleMenu, setToggleMenu] = useState(false)
-
+  
   const toggleNav = () => {
     setToggleMenu(!toggleMenu)
 
@@ -30,22 +39,81 @@ const Navbar = () => {
             <ul className='flex align-center'>
               <li className='pr-2r font-16px'>
                 <Link to="#" className='text-decoration text-upper white-color mega-hover'>What We Do <FaChevronDown className='relative top-3px' />
-                  <div className={`mega-menu flex p-1r ${pathname !== '/' && 'left-25'}`}>
+                  <div className={`mega-menu flex p-1r`}>
                     <div className='inner-mega'>
                       <ul className='mega-content '>
-                        <li><Link to={'/services/online-advertising'} className='text-decoration big-color font-weight-500'>Online Advertising</Link></li>
-                        <li><Link to={'/services/smm'} className='text-decoration big-color font-weight-500'>SMM</Link></li>
-                        <li><Link to={'/services/email-marketing'} className='text-decoration big-color font-weight-500'>Email Marketing</Link></li>
-                      </ul>
-                      <ul className='mega-content'>
-                        <li><Link to={'/services/video-production'} className='text-decoration big-color font-weight-500'>Video Production</Link></li>
-                        <li><Link to={'/services/sms-marketing'} className='text-decoration big-color font-weight-500'>SMS Marketing</Link></li>
-                        <li><Link to={'services/brand-marketing'} className='text-decoration big-color font-weight-500'>Brand Marketing</Link></li>
-                      </ul>
-                      <ul className='mega-content'>
-                        <li><Link to={'/services/graphic-design'} className='text-decoration big-color font-weight-500'>Graphic Design</Link></li>
-                        <li><Link to={'/services/marketing-strategy'} className='text-decoration big-color font-weight-500'>Marketing Strategy</Link></li>
-                        <li><Link to={'services/web-development'} className='text-decoration big-color font-weight-500'>Website Development</Link></li>
+                        <div className='mega-card'>
+                          <div className='mega-card-inner'>
+                            <div className='mega-card-img-div'>
+                              <img src={onlineAdvertising} alt="" className='mega-card-img'/>
+                            </div>
+                            <Link to={'/services/online-advertising'} className="mega-card-text">Online Advertising</Link>
+                          </div>
+                        </div>
+                        <div className='mega-card'>
+                          <div className='mega-card-inner'>
+                            <div className='mega-card-img-div'>
+                              <img src={socialmediamarketingandmanagement} alt="" className='mega-card-img'/>
+                            </div>
+                            <Link to={'/services/smm'} className="mega-card-text">SMM</Link>
+                          </div>
+                        </div>
+                        <div className='mega-card'>
+                          <div className='mega-card-inner'>
+                            <div className='mega-card-img-div'>
+                              <img src={emailmarketing} alt="" className='mega-card-img'/>
+                            </div>
+                            <Link to={'/services/email-marketing'} className="mega-card-text">Email Marketing</Link>
+                          </div>
+                        </div>
+                        <div className='mega-card'>
+                          <div className='mega-card-inner'>
+                            <div className='mega-card-img-div'>
+                              <img src={videoproduction} alt="" className='mega-card-img'/>
+                            </div>
+                            <Link to={'/services/video-production'} className="mega-card-text">Video Production</Link>
+                          </div>
+                        </div>
+                        <div className='mega-card'>
+                          <div className='mega-card-inner'>
+                            <div className='mega-card-img-div'>
+                              <img src={smsmarketing} alt="" className='mega-card-img'/>
+                            </div>
+                            <Link to={'/services/sms-marketing'} className="mega-card-text">SMS Marketing</Link>
+                          </div>
+                        </div>
+                        <div className='mega-card'>
+                          <div className='mega-card-inner'>
+                            <div className='mega-card-img-div'>
+                              <img src={brandMarketing} alt="" className='mega-card-img'/>
+                            </div>
+                            <Link to={'services/brand-marketing'} className="mega-card-text">Brand Marketing</Link>
+                          </div>
+                        </div>
+                        <div className='mega-card'>
+                          <div className='mega-card-inner'>
+                            <div className='mega-card-img-div'>
+                              <img src={graphicdesign} alt="" className='mega-card-img'/>
+                            </div>
+                            <Link to={'/services/graphic-design'} className="mega-card-text">Graphic Design</Link>
+                          </div>
+                        </div>
+                        <div className='mega-card'>
+                          <div className='mega-card-inner'>
+                            <div className='mega-card-img-div'>
+                              <img src={marketingstrategy} alt="" className='mega-card-img'/>
+                            </div>
+                            <Link to={'/services/marketing-strategy'} className="mega-card-text">Marketing Strategy</Link>
+                          </div>
+                        </div>
+                        <div className='mega-card'>
+                          <div className='mega-card-inner'>
+                            <div className='mega-card-img-div'>
+                              <img src={websitedevelopment} alt="" className='mega-card-img'/>
+                            </div>
+                            <Link to={'services/web-development'}  className="mega-card-text">Website Development</Link>
+                          </div>
+                        </div> 
                       </ul>
                     </div>
                   </div>
