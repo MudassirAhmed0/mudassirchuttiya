@@ -165,16 +165,16 @@ const Navbar = () => {
         <img src={Logo} alt="menu logo" className='nav-menu-img' />
         {(toggleMenu && (
           <ul className="list">
-            <Link to="/" className='items'>
+            <Link to="/" onClick={toggleNav} className='items'>
               <li>Home</li>
             </Link>
-            <Link to="" className='items'>
+            <Link to="" onClick={toggleNav} className='items'>
               <li>What We DO</li>
             </Link>
-            <Link to="/about-us" className='items'>
+            <Link to="/about-us"  onClick={toggleNav}className='items'>
               <li>About Us</li>
             </Link>
-            <Link to="/contact-us" className='items'>
+            <Link to="/contact-us" onClick={toggleNav} className='items'>
               <li>Contact Us</li>
             </Link>
           </ul>
