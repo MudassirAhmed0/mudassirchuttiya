@@ -1,8 +1,11 @@
 import React, { useRef, useState } from 'react'
 import { CgArrowLongRight } from 'react-icons/cg'
 import { Link } from 'react-router-dom'
+import imgbsdk from '../../assets/images/detail-icon-both/videoproduction-blue.svg' 
+import imgbsdk2 from '../../assets/images/detail-icon-both/videoproduction-white.svg' 
 
-const Card = ({ item }) => {
+
+const Card = ({ item,images }) => {
     const [image,setImage] = useState(true)
     const imgRef = useRef()
     const handleMouseEnter = (src) => setImage(!image)
@@ -13,8 +16,9 @@ const Card = ({ item }) => {
                 {/* <img src={OnlineIcon} alt="" className='icon-width' /> */}
 
                 {/* <img ref={imgRef} src={item?.info?.imgBlue} alt={item?.info?.heading} className='icon-width' /> */}
-     {   image ?        <img  src={item?.info?.imgBlue} alt={item?.info?.heading} className='icon-width' />:
-                <img  src={item?.info?.imgWhite} alt={item?.info?.heading} className='icon-width' />}
+     {   image ?        <img  src={images.imgBlue} alt={item?.info?.heading} className='icon-width' />:
+                <img  src={images.imgWhite} alt={item?.info?.heading} className='icon-width' />}
+            
                 {/* {!isHovered ?
                                 :
 
