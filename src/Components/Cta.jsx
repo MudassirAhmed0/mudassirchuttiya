@@ -12,11 +12,11 @@ const Cta = () => {
                             <h2 className='cta-heading'>Do you have a project that you would like to discuss? Get in contact with us! <span className='min-tab-none'></span></h2>
 
                         </div>
-                        <div className='col-36 min-tab-cta-contact flex flex-column justify-center min-tab-mr-4 '>
-                            <div>
+                        <div className='col-36 min-tab-cta-contact flex flex-column mob-direction-row mob-cta-contact justify-center min-tab-mr-4 '>
+                            <div className='cta-input-w'>
                                 <input type="text" placeholder='Enter your email' />
                             </div>
-                            <div className='mt-2r'>
+                            <div className='mt-2r cta-input-w'>
                                 <input type="text" placeholder='Your message...' />
                             </div>
                             <div className='cta-btn'>

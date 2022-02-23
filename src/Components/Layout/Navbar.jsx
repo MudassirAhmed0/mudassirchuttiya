@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
-import { Link, NavLink } from 'react-router-dom';
-import { FaChevronDown } from "react-icons/fa";
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
+import { FaChevronDown, FaBars } from "react-icons/fa";
 import Logo from '../../assets/images/logo.png'
 
 
@@ -8,20 +8,23 @@ import Logo from '../../assets/images/logo.png'
 const Navbar = () => {
 
   const pathname = window.location.pathname
-  // const [click, setClick] = React.useState(false);
 
-  // const handleClick = () => setClick(!click);
-  // const Close = () => setClick(false);
+  const [toggleMenu, setToggleMenu] = useState(false)
+
+  const toggleNav = () => {
+    setToggleMenu(!toggleMenu)
+
+  }
 
   return (
-    <> 
+    <>
       <div className='absolute top-menu min-tab-none horizontaly-center w-930px z-1 ipad-pr-3r ipad-pl-3r'>
         <div className='flex pt-2r space-between align-center'>
           <div>
-          <Link to={'/'}>
+            <Link to={'/'}>
 
-            <img src={Logo} alt="logo" />
-          </Link>
+              <img src={Logo} alt="logo" />
+            </Link>
           </div>
           <div>
             <ul className='flex align-center'>
@@ -51,12 +54,12 @@ const Navbar = () => {
               <li className='pr-2r font-16px'>
                 <Link to="#" className='text-decoration text-upper white-color'>About Us</Link>
               </li>
-              <li className='pr-2r font-16px'>
+              {/* <li className='pr-2r font-16px'>
                 <Link to="#" className='text-decoration text-upper white-color'>Why Us?</Link>
               </li>
               <li className='pr-2r font-16px'>
                 <Link to="#" className='text-decoration text-upper white-color mr-1r'>Expertize</Link>
-              </li>
+              </li> */}
               {pathname === '/' &&
                 <li className='contact-us'>
                   <Link to={"/contact-us"} className='text-decoration text-upper white-color white-color'>Contact Us</Link>
@@ -71,68 +74,29 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* <div>
-        <div className={click ? "main-container" : ""} onClick={() => Close()} />
-        <nav className="navbar" onClick={e => e.stopPropagation()}>
-          <div className="nav-container">
-            <NavLink exact to="/" className="nav-logo">
-              CodeBucks
-              <i className="fa fa-code"></i>
-            </NavLink>
-            <ul className={click ? "nav-menu active" : "nav-menu"}>
-              <li className="nav-item">
-                <NavLink
-                  exact
-                  to="/"
-                  activeClassName="active"
-                  className="nav-links"
-                  onClick={click ? handleClick : null}
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  exact
-                  to="/about"
-                  activeClassName="active"
-                  className="nav-links"
-                  onClick={click ? handleClick : null}
-                >
-                  About
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  exact
-                  to="/blog"
-                  activeClassName="active"
-                  className="nav-links"
-                  onClick={click ? handleClick : null}
-                >
-                  Blog
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  exact
-                  to="/contact"
-                  activeClassName="active"
-                  className="nav-links"
-                  onClick={click ? handleClick : null}
-                >
-                  Contact Us
-                </NavLink>
-              </li>
-            </ul>
-            <div className="nav-icon" onClick={handleClick}>
-              <i className={click ? "fa fa-times" : "fa fa-bars"}></i>
-            </div>
-          </div>
-        </nav>
-      </ div> */}
 
-      
+      <nav className="">
+        <img src={Logo} alt="menu logo" className='nav-menu-img' />
+        {(toggleMenu && (
+          <ul className="list">
+            <Link to="#" className='items'>
+              <li>Home</li>
+            </Link>
+            <Link to="#" className='items'>
+              <li>What We DO</li>
+            </Link>
+            <Link to="#" className='items'>
+              <li>About</li>
+            </Link>
+            <Link to="#" className='items'>
+              <li>Contact Us</li>
+            </Link>
+          </ul>
+        ))}
+
+        <button onClick={toggleNav} className="btn "><FaBars className='humburger' /></button>
+
+      </nav>
     </>
   )
 }

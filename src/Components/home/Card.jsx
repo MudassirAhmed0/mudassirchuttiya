@@ -12,7 +12,7 @@ const Card = ({ item }) => {
             <div className='flex justify-center align-center h-150px'>
                 {/* <img src={OnlineIcon} alt="" className='icon-width' /> */}
 
-                <img ref={imgRef} src={item?.info?.imgBlue} alt="" className='icon-width' />
+                <img ref={imgRef} src={item?.info?.imgBlue} alt={item?.info?.heading} className='icon-width' />
                 {/* {!isHovered ?
                                 :
 
